@@ -53,24 +53,10 @@
                     </relocations>
                     <filters>
                         <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>com/cryptomorin/xseries/NMSExtras*</exclude>
-                                <exclude>com/cryptomorin/xseries/NoteBlockMusic*</exclude>
-                                <exclude>com/cryptomorin/xseries/ReflectionUtils*</exclude>
-                                <exclude>com/cryptomorin/xseries/SkullCacheListener*</exclude>
-                                <exclude>com/cryptomorin/xseries/SkullUtils*</exclude>
-                                <exclude>com/cryptomorin/xseries/XBiome*</exclude>
-                                <exclude>com/cryptomorin/xseries/XBlock*</exclude>
-                                <exclude>com/cryptomorin/xseries/XEnchantment*</exclude>
-                                <exclude>com/cryptomorin/xseries/XEntity*</exclude>
-                                <exclude>com/cryptomorin/xseries/XItemStack*</exclude>
-                                <exclude>com/cryptomorin/xseries/XMaterial*</exclude>
-                                <exclude>com/cryptomorin/xseries/XPotion*</exclude>
-                                <exclude>com/cryptomorin/xseries/XTag*</exclude>
-                                <exclude>com/cryptomorin/xseries/particle/XParticle*</exclude>
-                                <exclude>com/cryptomorin/xseries/particle/ParticleDisplay*</exclude>
-                            </excludes>
+                            <artifact>*:XSeries</artifact>
+                            <includes>
+                                <exclude>com/cryptomorin/xseries/XSound*</exclude>
+                            </includes>
                         </filter>
                     </filters>
                 </configuration>
