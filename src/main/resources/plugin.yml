@@ -1,0 +1,8 @@
+name: action-api
+version: '${project.version}'
+main: org.kayteam.actionapi.ActionApi
+api-version: 1.13
+softdepend: [ PlaceholderAPI, Vault ]
+authors: [ SirOswaldo ]
+description: Action api for your plugins!
+website: https://kayteam.org
