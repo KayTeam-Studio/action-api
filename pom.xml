@@ -68,6 +68,8 @@
                                 <exclude>com/cryptomorin/xseries/XMaterial*</exclude>
                                 <exclude>com/cryptomorin/xseries/XPotion*</exclude>
                                 <exclude>com/cryptomorin/xseries/XTag*</exclude>
+                                <exclude>com/cryptomorin/xseries/particle/XParticle*</exclude>
+                                <exclude>com/cryptomorin/xseries/particle/ParticleDisplay*</exclude>
                             </excludes>
                         </filter>
                     </filters>
