@@ -11,7 +11,7 @@ public abstract class Action {
         this.name = name;
     }
 
-    public String getInventoryName() {
+    public String getName() {
         return name;
     }
 

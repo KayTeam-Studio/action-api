@@ -30,7 +30,7 @@ public class ActionList {
 
     public Action getAction(String name) {
         for (Action action:actions) {
-            if (action.getInventoryName().equals(name)) {
+            if (action.getName().equals(name)) {
                 return action;
             }
         }
@@ -42,11 +42,7 @@ public class ActionList {
     }
 
     public void removeAction(String name) {
-        for (Action action:actions) {
-            if (action.getInventoryName().equals(name)) {
-                actions.remove(action);
-            }
-        }
+        actions.removeIf(action -> action.getName().equals(name));
     }
 
     public void runActions(Player player) {

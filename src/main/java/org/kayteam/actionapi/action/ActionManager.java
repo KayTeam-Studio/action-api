@@ -48,7 +48,7 @@ public class ActionManager {
     }
 
     public void addAction(Action action) {
-        actions.put(action.getInventoryName(), action);
+        actions.put(action.getName(), action);
     }
 
     public void removeAction(String name) {
