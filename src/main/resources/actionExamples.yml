@@ -1,0 +1,13 @@
+actions:
+  - "[player] command arg1 arg2"
+  - "[console] command arg1 arg2"
+  - "[message] message"
+  - "[broadcast] message"
+  - "[close]"
+  - "[sound] CHEST_CLOSE 1 1"
+  - "[takemoney] 100"
+  - "[givemoney] 100"
+  - "[setmoney] 100"
+  - "[givepermission] example.node"
+  - "[takepermission] example.node"
+  - "[teleport] world x y z yaw pitch"

@@ -6,26 +6,15 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.kayteam.actionapi.action.Action;
 
-public class ConsoleCommandAction extends Action {
+public class ConsoleCommand extends Action {
 
-    private String command = "";
-
-    public ConsoleCommandAction(String name, String command) {
-        super(name);
-        this.command = command;
-    }
-
-    public ConsoleCommandAction(String command) {
-        super("[console-command]");
-        this.command = command;
-    }
-
-    public ConsoleCommandAction() {
-        super("[console-command]");
+    public ConsoleCommand(String value) {
+        super("[consoleCommand]" ,value);
     }
 
     @Override
     public void runAction(Player player) {
+        String command = getValue();
         // PlaceholderAPI
         if (Bukkit.getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
             command = PlaceholderAPI.setPlaceholders(player, command);

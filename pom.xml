@@ -6,7 +6,7 @@
 
     <groupId>org.kayteam</groupId>
     <artifactId>action-api</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>action-api</name>
@@ -48,7 +48,7 @@
                     <relocations>
                         <relocation>
                             <pattern>com.cryptomorin.xseries</pattern>
-                            <shadedPattern>org.kayteam.actionapi.utils</shadedPattern>
+                            <shadedPattern>org.kayteam.xseries</shadedPattern>
                         </relocation>
                     </relocations>
                     <filters>

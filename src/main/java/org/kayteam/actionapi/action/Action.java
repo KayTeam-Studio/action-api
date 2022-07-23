@@ -2,17 +2,23 @@ package org.kayteam.actionapi.action;
 
 import org.bukkit.entity.Player;
 
-public abstract class Action {
+public class Action {
 
-    private final String name;
+    private final String type;
+    private final String value;
     private ActionManager actionManager;
 
-    public Action(String name) {
-        this.name = name;
+    public Action(String type, String value) {
+        this.type = type;
+        this.value = value;
     }
 
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
+    }
+
+    public String getValue() {
+        return value;
     }
 
     public ActionManager getActionManager() {
@@ -23,6 +29,6 @@ public abstract class Action {
         this.actionManager = actionManager;
     }
 
-    public abstract void runAction(Player player);
+    public void runAction(Player player) {}
 
 }

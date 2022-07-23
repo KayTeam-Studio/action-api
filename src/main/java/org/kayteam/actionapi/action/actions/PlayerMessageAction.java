@@ -6,34 +6,15 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.kayteam.actionapi.action.Action;
 
-public class MessageAction extends Action {
+public class PlayerMessageAction extends Action {
 
-    private String message = "";
-
-    public MessageAction(String name, String message) {
-        super(name);
-        this.message = message;
-    }
-
-    public MessageAction(String message) {
-        super("[message]");
-        this.message = message;
-    }
-
-    public MessageAction() {
-        super("[message]");
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public PlayerMessageAction(String value) {
+        super("[playerMessage]", value);
     }
 
     @Override
     public void runAction(Player player) {
+        String message = getValue();
         // PlaceholderAPI
         if (Bukkit.getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
             message = PlaceholderAPI.setPlaceholders(player, message);

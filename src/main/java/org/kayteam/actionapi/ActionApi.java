@@ -7,12 +7,12 @@ import org.kayteam.actionapi.utils.BrandSender;
 public final class ActionApi extends JavaPlugin {
 
     private final ActionManager actionManager = new ActionManager();
-    private static ActionApi actionApi = null;
+    private static ActionApi actionApi;
 
     @Override
     public void onEnable() {
         actionApi = this;
-        actionManager.register();
+        actionManager.register(this);
         BrandSender.sendVersionStatus(this, getServer().getConsoleSender(), "&aEnabled");
     }
 

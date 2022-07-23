@@ -6,36 +6,17 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.kayteam.actionapi.action.Action;
 
-public class TeleportAction extends Action {
+public class PlayerTeleport extends Action {
 
-    private String coordinatesFormat = "";
-
-    public TeleportAction(String name, String coordinatesFormat) {
-        super(name);
-        this.coordinatesFormat = coordinatesFormat;
-    }
-
-    public TeleportAction(String coordinatesFormat) {
-        super("[teleport]");
-        this.coordinatesFormat = coordinatesFormat;
-    }
-
-    public TeleportAction() {
-        super("[teleport]");
-    }
-
-    public String getCoordinatesFormat() {
-        return coordinatesFormat;
-    }
-
-    public void setCoordinatesFormat(String coordinatesFormat) {
-        this.coordinatesFormat = coordinatesFormat;
+    public PlayerTeleport(String value) {
+        super("[playerTeleport]", value);
     }
 
     @Override
     public void runAction(Player player) {
-        if (!coordinatesFormat.equals("")) {
-            if (coordinatesFormat.contains(" ")) {
+        if (!getValue().equals("")) {
+            if (getValue().contains(" ")) {
+                String coordinatesFormat = getValue();
                 if (Bukkit.getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
                     coordinatesFormat = PlaceholderAPI.setPlaceholders(player, coordinatesFormat);
                 }
