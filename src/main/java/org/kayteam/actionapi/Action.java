@@ -7,7 +7,7 @@ public abstract class Action {
     private ActionManager actionManager;
     private final String format;
 
-    public Action(String format) {
+    protected Action(String format) {
         this.format = format;
     }
 
@@ -62,5 +62,4 @@ public abstract class Action {
     public String toString() {
         return getFormat();
     }
-
 }

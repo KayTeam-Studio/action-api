@@ -3,10 +3,7 @@ package org.kayteam.actionapi;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.kayteam.actionapi.actions.ConsoleAction;
-import org.kayteam.actionapi.actions.MessageAction;
-import org.kayteam.actionapi.actions.PlayerAction;
-import org.kayteam.actionapi.actions.SoundAction;
+import org.kayteam.actionapi.actions.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -97,6 +94,21 @@ public class ActionManager {
 
                 case "sound": {
                     action = new SoundAction(format);
+                    break;
+                }
+
+                case "potion": {
+                    action = new PotionAction(format);
+                    break;
+                }
+
+                case "actionbar": {
+                    action = new ActionBarAction(format);
+                    break;
+                }
+
+                case "removepotion": {
+                    action = new RemovePotionAction(format);
                     break;
                 }
 

@@ -42,7 +42,7 @@ public class SoundAction extends Action {
             player.playSound( player.getLocation() , sound , volume , pitch);
 
         } catch (Exception e) {
-            getActionManager().getJavaPlugin().getLogger().info( "Invalid sound format from '" + getFormat() + "' . Please verify your settings.yml");
+            getActionManager().getJavaPlugin().getLogger().info( "Invalid sound format from '" + getFormat());
         }
 
     }
