@@ -10,7 +10,7 @@
 
 ```XML
 <dependency>
-    <groupId>com.github.SoyAldo</groupId>
+    <groupId>com.github.KayTeam-Studio</groupId>
     <artifactId>action-api</artifactId>
     <version>{VERSION}</version>
 </dependency>
@@ -24,10 +24,10 @@ repositories {
  
 ```groovy
 dependencies {
-    implementation 'com.github.SoyAldo:action-api:{VERSION}'
+    implementation 'com.github.KayTeam-Studio:action-api:{VERSION}'
 }
 ```
 Check the last released version in Releases section
 
 ## How to use
-https://github.com/SoyAldo/action-api/wiki
+https://github.com/KayTeam-Studio/action-api/wiki
