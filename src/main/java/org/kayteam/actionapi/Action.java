@@ -25,7 +25,7 @@ public abstract class Action {
 
     public abstract void execute(Player player );
 
-    private String getType() {
+    public String getType() {
 
         String type = format;
 

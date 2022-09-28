@@ -7,6 +7,7 @@ import org.kayteam.actionapi.actions.*;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
 
 public class ActionManager {
 
@@ -110,6 +111,10 @@ public class ActionManager {
                 case "removepotion": {
                     action = new RemovePotionAction(format);
                     break;
+                }
+
+                default: {
+                    javaPlugin.getLogger().log(Level.INFO, "An error has ocurred trying to load " + format + " action. Invalid type.");
                 }
 
             }
