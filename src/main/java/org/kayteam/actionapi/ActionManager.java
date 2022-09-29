@@ -120,6 +120,7 @@ public class ActionManager {
             }
 
         }
+        if(action != null) action.setActionManager( this );
 
         return action;
 
