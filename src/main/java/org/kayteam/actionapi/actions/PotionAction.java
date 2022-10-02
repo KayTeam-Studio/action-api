@@ -1,5 +1,6 @@
 package org.kayteam.actionapi.actions;
 
+import com.cryptomorin.xseries.XPotion;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -15,7 +16,7 @@ public class PotionAction extends Action {
             String value = getValue();
             String[] values = value.split(" ");
 
-            PotionEffectType potionEffectType = PotionEffectType.getByName(values[0]);
+            PotionEffectType potionEffectType = XPotion.matchXPotion(values[0]).get().getPotionEffectType();
             int duration = Integer.parseInt(values[1]);
             int amplifier = Integer.parseInt(values[2]);
 

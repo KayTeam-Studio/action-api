@@ -1,8 +1,7 @@
 package org.kayteam.actionapi.actions;
 
+import com.cryptomorin.xseries.messages.ActionBar;
 import me.clip.placeholderapi.PlaceholderAPI;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.kayteam.actionapi.Action;
@@ -23,6 +22,6 @@ public class ActionBarAction extends Action {
 
         value = ChatColor.translateAlternateColorCodes( '&' , value );
 
-        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(value));
+        ActionBar.sendActionBar(player, value);
     }
 }

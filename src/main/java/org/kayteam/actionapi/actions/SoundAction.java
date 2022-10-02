@@ -1,5 +1,6 @@
 package org.kayteam.actionapi.actions;
 
+import com.cryptomorin.xseries.XSound;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -39,7 +40,7 @@ public class SoundAction extends Action {
                 sound = Sound.valueOf( value );
             }
 
-            player.playSound( player.getLocation() , sound , volume , pitch);
+            player.playSound( player.getLocation() , XSound.matchXSound(sound).parseSound() , volume , pitch);
 
         } catch (Exception e) {
             getActionManager().getJavaPlugin().getLogger().info( "Invalid sound format from '" + getFormat());
